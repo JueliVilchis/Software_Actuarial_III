@@ -7,13 +7,10 @@ datos <- read.table("C:/Users/lenovo/Documents/GitHub/Software_Actuarial_III/Cal
 rankall <- function(resultado, num = "mejor") {
     
     Estado <- levels(factor(datos[, 7]))
-    
     hospital <- vector(mode="character") 
-    
-    for (i in seq(state)) {
-        
-        hospital[i] <- rankhospital(state[i], outcome, num)
-        }
+    for (i in seq(Estado)) {
+     hospital[i] <- rankhospital(Estado[i], datos, num)
+    }
     data.frame(hospital, Estado)
     
 }
